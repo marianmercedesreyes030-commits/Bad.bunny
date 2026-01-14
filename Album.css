@@ -1,0 +1,95 @@
+/* FONDO */
+body {
+    margin: 0;
+    background: linear-gradient(#79c2ff, #9cd7ff);
+    font-family: Arial, sans-serif;
+}
+
+/* MENÚ */
+header {
+    background-color: #0d6efd;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.titulo {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.album-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 60px auto;
+}
+
+
+.album-item {
+    width: 230px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.album-item img {
+    width: 100%;
+    border-radius: 20px;
+    border: 6px solid #6e0d25; 
+}
+
+.album-item p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: #4aa8ff;
+    color: white;
+}
+
+.pie {
+    background-color: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 50px;
+    font-size: 16px;
+    border-top: 5px solid #7b0c24; 
+
+}
+
+.pie a {
+    color: #ffd8d8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #74c7f5, #8ed8ff);
+}
+
+nav {
+    background-color: #0d6efd;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    justify-content: center;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a.active {
+    font-weight: bolder;
+    opacity: 0.8;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 35px;
+    color: #222;
+}
+
+.contenedor-canciones {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    width: 230px;
+    background-color: #fff;
+    border: 5px solid #7b0c24;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    transition: transform .3s;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.nombre {
+    font-size: 18px;
+    padding: 10px;
+    font-family: "Comic Sans MS";
+}
+
+
+.pie {
+    background-color: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 50px;
+    font-size: 16px;
+    border-top: 5px solid #7b0c24; 
+}
+
+.pie a {
+    color: #ffd8d8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
