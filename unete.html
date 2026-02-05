@@ -1,113 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Únete al Mundo Bad Bunny — Registro</title>
+  <meta charset="UTF-8">
+  <title>Únete al Mundo Bad Bunny</title>
   <link rel="stylesheet" href="Unete.css">
 </head>
 <body>
-  <header class="topbar">
-    <nav class="nav">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="biografia.html">Biografía</a></li>
-                <li><a href="canciones.html">Canciones</a></li>
-                <li><a href="album.html" class="active">Álbum</a></li>
-                <li><a href="premios.html">Premios</a></li>
-                <li><a href="Gira.html">Giras</a></li>
-                <li><a href="Sobre Nosotros.html">Sobre nosotros</a></li>
-                <li><a href="unete.html">Unete</a></li>
-            </ul>
-    </nav>
-  </header>
 
-  <main class="page">
-    <section class="card register-card" aria-labelledby="join-title">
-      <h1 id="join-title">Únete al Mundo Bad Bunny</h1>
-      <p class="subtitle">Regístrate para recibir noticias, acceso a preventas y contenido exclusivo.</p>
+<header class="topbar">
+  <nav class="nav">
+    <ul>
+       <li><a href="index.html">Inicio</a></li>
+       <li><a href="Biografia.html">Biografía</a></li>
+       <li><a href="Canciones.html">Canciones</a></li>
+       <li><a href="Album.html">Álbum</a></li>
+       <li><a href="Premios.html">Premios</a></li>
+       <li><a href="Gira.html">Giras</a></li>
+       <li><a href="Sobre Nosotros.html">Sobre Nosotros</a></li>
+       <li><a href="unete.html">Formulario</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <form class="register-form" action="#" method="post" autocomplete="on" novalidate>
-        <div class="row">
-          <label for="fullname">Nombre completo</label>
-          <input id="fullname" name="fullname" type="text" placeholder="Tu nombre completo" required />
+<main class="page">
+  <section class="card register-card">
+
+    <h1>Únete al Mundo Bad Bunny</h1>
+    <p class="subtitle">Regístrate y déjanos tu opinión sobre la página</p>
+
+    <form id="formulario" class="register-form">
+
+      <div class="row">
+        <label>Nombre completo</label>
+        <input type="text" id="nombre" required>
+      </div>
+
+      <div class="two-col">
+        <div class="col">
+          <label>Correo electrónico</label>
+          <input type="email" id="correo" required>
         </div>
 
-        <div class="two-col">
-          <div class="col">
-            <label for="country">País</label>
-            <select id="country" name="country" required>
-              <option value="">Selecciona tu país</option>
-              <option value="PR">Puerto Rico</option>
-              <option value="DO">República Dominicana</option>
-              <option value="US">Estados Unidos</option>
-              <option value="MX">México</option>
-              <option value="ES">España</option>
-              <option value="AR">Argentina</option>
-              <option value="CR">Costa Rica</option>
-              <option value="OT">Otro</option>
-            </select>
-          </div>
-
-          <div class="col">
-            <label for="email">Correo electrónico</label>
-            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
-          </div>
+        <div class="col">
+          <label>País</label>
+          <select id="pais" required>
+            <option value="">Selecciona</option>
+            <option>República Dominicana</option>
+            <option>México</option>
+            <option>Colombia</option>
+            <option>Argentina</option>
+            <option>España</option>
+            <option>Otros</option>
+          </select>
         </div>
+      </div>
 
-        <div class="two-col">
-          <div class="col">
-            <label for="password">Contraseña</label>
-            <input id="password" name="password" type="password" placeholder="Escribe una contraseña" minlength="6" required />
-          </div>
-
-          <div class="col">
-            <label for="confirm">Confirmar contraseña</label>
-            <input id="confirm" name="confirm" type="password" placeholder="Repite la contraseña" minlength="6" required />
-          </div>
-        </div>
-
-        <div class="checkbox-row">
-          <label class="checkbox-label">
-            <input type="checkbox" name="subscribe" /> Quiero recibir noticias y preventas
-          </label>
-        </div>
-
-        <div class="buttons">
-          <button type="submit" class="btn-primary">¡Únete y vibra! 🏝️</button>
-          <button type="reset" class="btn-outline">Limpiar</button>
-        </div>
-      </form>
-
-      <section class="beneficios">
-        <h2>Beneficios</h2>
-        <div class="beneficios-grid">
-          <div class="beneficio-card">
-            <h3>Conciertos</h3>
-            <p>Acceso a preventas y notificaciones prioritarias.</p>
-          </div>
-          <div class="beneficio-card">
-            <h3>Contenido exclusivo</h3>
-            <p>Material detrás de cámaras y noticias exclusivas.</p>
-          </div>
-          <div class="beneficio-card">
-            <h3>Descuentos</h3>
-            <p>Ofertas especiales en merchandising y entradas.</p>
+      <div class="two-col">
+        <div class="col">
+          <label>Contraseña</label>
+          <div class="password-box">
+            <input type="password" id="password" required>
+            <span class="ojo" onclick="verPassword('password', this)">👁️</span>
           </div>
         </div>
 
-        <ul class="benefit-list">
-          <li>Acceso a noticias exclusivas</li>
-          <li>Preventas y descuentos</li>
-          <li>Contenido exclusivo y material detrás de cámaras</li>
-        </ul>
-      </section>
+        <div class="col">
+          <label>Confirmar contraseña</label>
+          <div class="password-box">
+            <input type="password" id="confirmar" required>
+            <span class="ojo" onclick="verPassword('confirmar', this)">👁️</span>
+          </div>
+        </div>
+      </div>
 
-      <p class="small-note">Al registrarte aceptas recibir comunicaciones. Respetamos tu privacidad.</p>
-    </section>
-  </main>
+      <h2 class="opinion-title">Opinión sobre la página</h2>
 
- <footer class="pie">
+      <div class="row">
+        <label>¿Qué fue lo que más te gustó?</label>
+        <textarea id="gusto" placeholder="Escribe tu opinión aquí..." required></textarea>
+      </div>
+
+      <div class="row">
+        <label>¿Qué mejorarías o qué no te gustó?</label>
+        <textarea id="mejorar" placeholder="Cuéntanos qué podemos mejorar"></textarea>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
+        <button type="reset" class="btn-outline">Limpiar</button>
+      </div>
+
+      <p class="small-note">
+        Al registrarte aceptas recibir comunicaciones. Respetamos tu privacidad
+      </p>
+
+    </form>
+
+  </section>
+</main>
+
+<footer class="pie">
         <p>© 2025 Página creada por Helen Mercedes Reyes</p>
         <p>República Dominicana · Todos los derechos reservados</p>
         <p>Contacto: helenmusicweb@gmail.com</p>
@@ -117,7 +109,9 @@
             <a href="https://www.tiktok.com/@badbunny?_r=1&_t=ZS-91XoIJSP53g">TikTok</a> · 
             <a href="https://youtube.com/@badbunnypr?si=HDIPfDFV_IW3tUaw">YouTube</a>
         </div>
+        
     </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

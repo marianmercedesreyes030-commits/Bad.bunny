@@ -1,206 +1,90 @@
-/* styles.css - formulario de registro
-   Colores solicitados: body #79c2ff y #9cd7ff; menú #0d6efd
-*/
-
+/* TU CSS ORIGINAL SE MANTIENE */
 :root{
-  --blue-1: #79c2ff;
-  --blue-2: #9cd7ff;
-  --menu-blue: #0d6efd;
-  --card-bg: #fffdf6;
-  --muted: #6b6b6b;
-  --accent: #ffd54f; /* botón amarillo */
-  --green: #2ea044;
-  --bordo: #6a2b3b;
+  --blue-1:#79c2ff;
+  --blue-2:#9cd7ff;
+  --menu-blue:#0d6efd;
+  --muted:#6b6b6b;
 }
 
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: "Helvetica Neue", Arial, sans-serif;color:#0b2540}
-
-/* fondo degradado */
 body{
-  background: linear-gradient(180deg,var(--blue-1),var(--blue-2));
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(180deg,var(--blue-1),var(--blue-2));
+
 }
 
-/* top menu */
-.topbar{
-  background: var(--menu-blue);
-  box-shadow: 0 2px 0 rgba(0,0,0,0.12);
-  position:sticky;
-  top:0;
-  z-index:50;
-}
+/* menú */
+.topbar{background:var(--menu-blue)}
 .nav ul{
   list-style:none;
   display:flex;
-  gap:22px;
+  justify-content:center;
+  gap:20px;
+  padding:12px;
   margin:0;
-  padding:12px 20px;
-  justify-content:center;
-  align-items:center;
 }
-.nav a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  letter-spacing:0.2px;
-}
-.nav a.active{ text-decoration:underline 2px rgba(255,255,255,0.15) }
+.nav a.active{text-decoration:underline}
+.nav a{color:white;text-decoration:none;font-weight:bold}
 
-/* layout central */
-.page{
-  display:flex;
-  justify-content:center;
-  padding:36px 20px 80px;
-}
 
-/* card principal */
+/* card */
+.page{display:flex;justify-content:center;padding:40px}
 .card{
-  width:100%;
-  max-width:920px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,250,240,0.95));
+  background:white;
+  padding:30px;
   border-radius:12px;
-  padding:28px;
-  box-shadow: 0 8px 24px rgba(9,30,63,0.12);
-  border:6px solid rgba(106,43,59,0.06);
-}
-
-/* registro */
-.register-card h1{
-  text-align:center;
-  margin:6px 0 6px;
-  font-size:26px;
-  color:#0b3a67;
-}
-.subtitle{
-  text-align:center;
-  color:var(--muted);
-  margin:0 0 18px;
-}
-
-/* formulario */
-.register-form{
-  margin-top:10px;
-}
-.row{margin-bottom:14px}
-label{
-  display:block;
-  font-size:14px;
-  color:#16425a;
-  margin-bottom:6px;
-  font-weight:600;
-}
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select{
   width:100%;
-  padding:10px 12px;
+  max-width:900px;
+}
+
+/* form */
+label{font-weight:bold;margin-bottom:6px;display:block}
+input,select,textarea{
+  width:100%;
+  padding:10px;
   border-radius:8px;
-  border:2px solid rgba(106,43,59,0.06);
-  background:#fff;
-  outline:none;
-  font-size:15px;
-  color:#123;
-  transition:box-shadow .15s, border-color .15s;
+  border:1px solid #ccc;
+  font-size:14px;
 }
-input:focus, select:focus{
-  border-color: rgba(13,110,253,0.6);
-  box-shadow:0 6px 18px rgba(13,110,253,0.08);
+textarea{min-height:90px;resize:vertical}
+
+.two-col{display:flex;gap:12px}
+.col{flex:1}
+.row{margin-bottom:15px}
+
+/* password box */
+.password-box{
+  position:relative;
+}
+.ojo{
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  opacity:0.6;
 }
 
-/* 2-column responsive */
-.two-col{
-  display:flex;
-  gap:12px;
-  margin-bottom:12px;
-}
-.two-col .col{flex:1}
-
-/* checkbox */
-.checkbox-row{margin:8px 0 18px}
-.checkbox-label{
-  display:flex;
-  gap:8px;
-  align-items:center;
-  color:#254a5e;
-}
+.ojo:hover{opacity:1}
 
 /* buttons */
-.buttons{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  margin-bottom:18px;
-}
+.buttons{display:flex;gap:10px}
 .btn-primary{
-  background: linear-gradient(180deg, #ffd54f, #f7c02e);
+  background:#ffd54f;
   border:none;
-  padding:12px 18px;
-  border-radius:12px;
-  font-weight:700;
+  padding:10px 16px;
+  border-radius:10px;
   cursor:pointer;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 .btn-outline{
   background:transparent;
-  border:2px solid rgba(13,110,253,0.14);
-  padding:10px 14px;
+  border:1px solid #ccc;
+  padding:10px 16px;
   border-radius:10px;
-  cursor:pointer;
 }
-
-/* beneficios */
-.beneficios{margin-top:10px;}
-.beneficios h2{color:#0b3a67;margin-bottom:12px}
-.beneficios-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin-bottom:12px;
-}
-.beneficio-card{
-  background:rgba(255,255,255,0.9);
-  padding:12px;
-  border-radius:10px;
-  border:2px solid rgba(106,43,59,0.04);
-}
-.beneficio-card h3{margin:0 0 6px;color:#0b3a67}
-.beneficio-card p{margin:0;color:#495964}
-
-/* lista de beneficios */
-.benefit-list{
-  margin:8px 0 0 18px;
-  color:#133a53;
-}
-
-/* nota pequeña */
-.small-note{font-size:13px;color:#5b6c6e;margin-top:8px}
 
 /* footer */
-.footer{
-  text-align:center;
-  margin:22px auto;
-  color:rgba(11,26,40,0.6);
-  opacity:0.9;
-}
-
-/* responsive */
-@media (max-width:900px){
-  .card{padding:18px}
-  .beneficios-grid{grid-template-columns:1fr}
-  .two-col{flex-direction:column}
-  .nav ul{gap:12px;padding:10px}
-  .nav a{font-size:14px}
-}
-
-@media (max-width:420px){
-  .nav ul{flex-wrap:wrap;gap:8px;padding:8px}
-  .card{margin:12px}
-  .register-card h1{font-size:20px}
-  .btn-primary{width:100%}
-}
 
 .pie {
     background-color: #0d6efd;
@@ -221,3 +105,4 @@ input:focus, select:focus{
 .pie a:hover {
     text-decoration: underline;
 }
+
